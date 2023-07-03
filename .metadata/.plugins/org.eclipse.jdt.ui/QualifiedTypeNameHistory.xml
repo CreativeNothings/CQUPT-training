@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="com.Model.User"/>
+<fullyQualifiedTypeName name="com.Model.UserHandler"/>
+<fullyQualifiedTypeName name="com.Service.Impl.UserServiceImpl"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="com.Service.UserService"/>
+</qualifiedTypeNameHistroy>

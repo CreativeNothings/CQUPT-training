@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<script>
+	function validateForm() {//验证用户名密码是否为空
+		let passconf = document.getElementById("passconf").value;
+		let age = document.getElementById("age").value;
+		let email = document.getElementById("email").value;
+		let username = document.getElementById("username").value;
+		let password = document.getElementById("password").value;
+		if (username == "" || password == "" || passconf == "" || age == ""
+				|| email == "") {
+			alert("All fields must be filled out");
+			return;
+		}
+		if (password != passconf) {
+			alert("the two passwords are inconsistent");
+			document.getElementById("password").value = "";
+			document.getElementById("passconf").value = "";
+			document.getElementById("password").focus();
+			return;
+		}
+		if (!isNumber(age)) {
+			alert("the age must be filled numbers");
+			return;
+		}
+		if (!isEmail(email)) {
+			alert("the email format is not correct");
+			return;
+		}
+		document.getElementById("myForm").submit();
+
+	}
+	function isNumber(val) {
+		var regPos = /^[0-9]+.?[0-9]*/;
+		return regPos.test(val);
+	}
+	function isEmail(val) {
+		var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+		return reg.test(val);
+	}
+</script>
+<style>
+body {
+	background: #1f88cb;
+}
+
+.register {
+	width: 380px;
+	height: 380px;
+	background: #d9e3e8;
+	margin: 100px auto; /*盒子顶部距离200，水平居中*/
+	border-radius: 10px; /*圆角10个像素*/
+}
+
+.register_top {
+	width: 100%;
+	height: 50px;
+	background: #093f63;
+	float: left;
+	border-radius: 10px 10px 0px 0px; /* 圆角四个参数的写法分别指左上，右上，右下 左下 */
+	color: white;
+	text-align: center; /* 水平居中 */
+	line-height: 50px; /* 垂直居中 */
+}
+
+.ref {
+	width: 350px;
+	height: 40px;
+	/*background:red;  这个背景色后面是要去掉的*/
+	margin-left: 15px;
+	margin-top: 5px;
+	/* 以上两句可以简写为margin:5px opx opk 10px; */
+	float: left; /*在这里你可以试着不加浮动，就知道浮动的作用了*/
+	text-align: center;
+	line-height: 40px;
+}
+
+.ref1 {
+	width: 160px;
+	height: 40px;
+	/*background:green; 这个背景色后面是要去掉的*/
+	margin-left: 0px;
+	margin-top: 0px;
+	/* 以上两句可以简写为margin:5px opx opk 10px; */
+	float: left; /*在这里你可以试着不加浮动，就知道浮动的作用了*/
+	text-align: right;
+	line-height: 40px;
+}
+
+.ref2 {
+	width: 190px;
+	height: 40px;
+	/*background:blue; 这个背景色后面是要去掉的*/
+	margin-left: 0px;
+	margin-top: 0px;
+	/* 以上两句可以简写为margin:5px opx opk 10px; */
+	float: left; /*在这里你可以试着不加浮动，就知道浮动的作用了*/
+	text-align: left;
+	line-height: 40px;
+}
+
+#btn, #res, #return {
+	width: 70px;
+	height: 25px;
+	font-size: 10pt;
+}
+</style>
+
+<body>
+	<div class="register">
+		<div class="register_top">Register Form</div>
+		<form id="myForm" action="RegistController" method="post">
+			<div class="ref">
+				<div class="ref1">Username：</div>
+				<div class="ref2">
+					<input type="text" id="username" name="username"/>
+				</div>
+			</div>
+			<div class="ref">
+				<div class="ref1">Password：</div>
+				<div class="ref2">
+					<input type="password" id="password" name="password" />
+				</div>
+			</div>
+			<div class="ref">
+				<div class="ref1">Password Confirm：</div>
+				<div class="ref2">
+					<input type="password" id="passconf" />
+				</div>
+			</div>
+			<div class="ref">
+				<div class="ref1">Age：</div>
+				<div class="ref2">
+					<input type="text" id="age" name="age" />
+				</div>
+			</div>
+			<div class="ref">
+				<div class="ref1">Gender：</div>
+				<div class="ref2">
+					<input type="radio" id="gender" name="gender" value="男" checked>男 <input
+						type="radio" id="gender" name="gender" value="女">女
+				</div>
+			</div>
+			<div class="ref">
+				<div class="ref1">Email：</div>
+				<div class="ref2">
+					<input type="text" id="email" name="name" />
+				</div>
+			</div>
+			<div class="ref">
+				<input type="button" value="Submit" id="btn"
+					onclick="validateForm()" /> <input type="button" value="Return"
+					id="return" />
+			</div>
+		</form>
+	</div>
+</body>
+</html>
