@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>ruanko.newspublish.action.register.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ArticleAdd</servlet-name>
+        <servlet-class>ruanko.newspublish.action.article.ArticleAdd</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ArticleDelete</servlet-name>
+        <servlet-class>ruanko.newspublish.action.article.ArticleDelete</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ArticleShowList</servlet-name>
+        <servlet-class>ruanko.newspublish.action.article.ArticleShowList</servlet-class>
+    </servlet>
+    <!--<servlet>-->
+    <!--<description>This is the description of my J2EE component</description>-->
+    <!--<display-name>This is the display name of my J2EE component</display-name>-->
+    <!--<servlet-name>ArticleDeleteList</servlet-name>-->
+    <!--<servlet-class>ruanko.newspublish.action.article.ArticleDeleteList</servlet-class>-->
+    <!--</servlet>-->
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ArticleShow</servlet-name>
+        <servlet-class>ruanko.newspublish.action.article.ArticleShow</servlet-class>
+    </servlet>
+    <!--<servlet>-->
+    <!--<description>This is the description of my J2EE component</description>-->
+    <!--<display-name>This is the display name of my J2EE component</display-name>-->
+    <!--<servlet-name>ArticleUpdateList</servlet-name>-->
+    <!--<servlet-class>ruanko.newspublish.action.article.ArticleUpdateList</servlet-class>-->
+    <!--</servlet>-->
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ArticleUpdate</servlet-name>
+        <servlet-class>ruanko.newspublish.action.article.ArticleUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ArticleUpdateDo</servlet-name>
+        <servlet-class>ruanko.newspublish.action.article.ArticleUpdateDo</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArticleAdd</servlet-name>
+        <url-pattern>/ArticleAdd</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArticleDelete</servlet-name>
+        <url-pattern>/ArticleDelete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArticleShowList</servlet-name>
+        <url-pattern>/ArticleShowList</url-pattern>
+    </servlet-mapping>
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>ArticleDeleteList</servlet-name>-->
+    <!--<url-pattern>/ArticleDeleteList</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <servlet-mapping>
+        <servlet-name>ArticleShow</servlet-name>
+        <url-pattern>/ArticleShow</url-pattern>
+    </servlet-mapping>
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>ArticleUpdateList</servlet-name>-->
+    <!--<url-pattern>/ArticleUpdateList</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <servlet-mapping>
+        <servlet-name>ArticleUpdate</servlet-name>
+        <url-pattern>/ArticleUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArticleUpdateDo</servlet-name>
+        <url-pattern>/ArticleUpdateDo</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
